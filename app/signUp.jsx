@@ -1,3 +1,6 @@
+/* Made by Sagnik Sinha for queries sagniksinha.2004@gmail.com */
+//Comment for bug fixes & debugging or new functionalities added
+
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useRef, useState } from 'react'
 import ScreenWrapper from '../components/ScreenWrapper'
@@ -18,11 +21,29 @@ const SignUp = () => {
     const [loading, setLoading] = useState(false)
 
     const onSubmit = async () => {
-        if (!emailRef.current || !passwordRef.current) {
+        if (!emailRef.current || !passwordRef.current || !nameRef.current) {
             Alert.alert("Sign Up", "please fill all the fields");
-            return
+            return;
         }
-        // good to go
+        
+        let name = nameRef.current.trim();
+        let email = emailRef.current.trim();
+        let password = passwordRef.current.trim();
+
+        setLoading(true);
+
+        // Insert Sign Up Logic here
+        console.log("Name: ", name);
+        console.log("Email: ", email);
+        console.log("Password: ", password);
+
+        setLoading(false);
+        
+        if (true) { // if login is successful
+            router.replace("/home");
+        } else { // if login is unsuccessful
+            router.replace("/welcome")
+        }
     }
 
   return (

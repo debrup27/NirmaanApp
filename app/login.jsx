@@ -1,3 +1,6 @@
+/* Made by Sagnik Sinha for queries sagniksinha.2004@gmail.com */
+//Comment for bug fixes & debugging or new functionalities added
+
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useRef, useState } from 'react'
 import ScreenWrapper from '../components/ScreenWrapper'
@@ -21,7 +24,23 @@ const Login = () => {
             Alert.alert("Login", "please fill all the fields");
             return
         }
-        // good to go
+        
+        let email = emailRef.current.trim();
+        let password = passwordRef.current.trim();
+
+        setLoading(true);
+
+        // Insert Login logic here
+        console.log("Email: ", email);
+        console.log("Password: ", password);
+
+        setLoading(false);
+
+        if (true) { // if login is successful
+            router.replace("/home");
+        } else { // if login is unsuccessful
+            router.replace("/welcome")
+        }
     }
 
   return (
