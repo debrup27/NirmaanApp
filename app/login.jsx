@@ -1,6 +1,5 @@
-/* Made by Sagnik Sinha for queries sagniksinha.2004@gmail.com */
 //Comment for bug fixes & debugging or new functionalities added
-
+//Fixed Login Logic & Documented ~Sagnik & Debrup
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useRef, useState } from 'react'
 import ScreenWrapper from '../components/ScreenWrapper'
@@ -20,8 +19,9 @@ const Login = () => {
     const [loading, setLoading] = useState(false)
 
     const onSubmit = async () => {
+        {/*Fixed Text Error ~Sagnik*/}
         if (!emailRef.current || !passwordRef.current) {
-            Alert.alert("Login", "please fill all the fields");
+            Alert.alert("Login", "Please Fill all Fields Correctly!");
             return
         }
         
@@ -56,7 +56,8 @@ const Login = () => {
         {/* Form */}
         <View style={styles.form}>
             <Text style={{fontSize: hp(1.5), color: theme.colors.text}}>
-                Please login to continue
+                {/*Fixed Text Error ~Sagnik*/}
+                Please Login to continue
             </Text>
             <Input
                 icon={<Icon name="mail" size={26} strokeWidth={1.6}/>}

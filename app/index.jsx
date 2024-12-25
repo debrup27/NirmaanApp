@@ -1,4 +1,4 @@
-/* Made by Debrup Sengupta for queries debrupsengupta289@gmail.com */
+/* Made by Debrup Sengupta (Deb) & Sagnik Sinha for queries debrupsengupta289@gmail.com , sagniksinha.2004@gmail.com */
 //Comment for bug fixes & debugging or new functionalities added
 import { Button, View, Text } from 'react-native'
 import React from 'react'

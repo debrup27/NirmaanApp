@@ -1,3 +1,4 @@
+//Snippet for dimension fetching ~Deb
 import { Dimensions } from "react-native";
 
 //get the window dimensions for ensuring proper rendering/responsiveness

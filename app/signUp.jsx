@@ -1,6 +1,5 @@
-/* Made by Sagnik Sinha for queries sagniksinha.2004@gmail.com */
-//Comment for bug fixes & debugging or new functionalities added
-
+//Comment for bugs in functions and fixes.
+//Fixed SignUp Logic & Documented ~Sagnik & Debrup
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useRef, useState } from 'react'
 import ScreenWrapper from '../components/ScreenWrapper'
@@ -21,8 +20,9 @@ const SignUp = () => {
     const [loading, setLoading] = useState(false)
 
     const onSubmit = async () => {
+        {/*Fixed Text Error ~Deb*/}
         if (!emailRef.current || !passwordRef.current || !nameRef.current) {
-            Alert.alert("Sign Up", "please fill all the fields");
+            Alert.alert("Sign Up", "Please Fill all Fields Correctly!");
             return;
         }
         
@@ -52,14 +52,16 @@ const SignUp = () => {
 
         {/* Welcome */}
         <View>
-            <Text style={styles.welcomeText}>Let's,</Text>
+            {/*Fixed Text Error ~Sagnik*/}
+            <Text style={styles.welcomeText}>Let's</Text>
             <Text style={styles.welcomeText}>Get Started</Text>
         </View>
 
         {/* Form */}
         <View style={styles.form}>
             <Text style={{fontSize: hp(1.5), color: theme.colors.text}}>
-                Please enter the details to create a new account
+                {/*Fixed Text Error ~Deb*/}
+                Please enter the details for creating a new account
             </Text>
             <Input
                 icon={<Icon name="user" size={26} strokeWidth={1.6}/>}

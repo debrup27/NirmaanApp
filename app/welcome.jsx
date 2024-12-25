@@ -7,6 +7,8 @@ import { theme } from '../constants/theme'
 import Button from '../components/Button';
 import { useRouter } from 'expo-router';
 
+// Fixed redundant Welcome Loading Render added short load animation ~ Sagnik
+
 const Welcome = () => {
     const router = useRouter();
 
@@ -31,8 +33,9 @@ const Welcome = () => {
                 onPress={() => router.push("signUp")}
             />
             <View style={styles.bottomTextContainer}>
+                {/*Corrected Texts ~Deb*/}
                 <Text style={styles.loginText}>
-                    Already have an account!
+                    Already have an account?
                 </Text>
                 <Pressable onPress={()=> router.push('login')}>
                     <Text style={[styles.loginText, {color: theme.colors.primaryDark, fontWeight: theme.fonts.semibold}]}>

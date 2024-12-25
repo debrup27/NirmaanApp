@@ -1,3 +1,4 @@
+//Responsive Wrapper Component for other application components
 import { View, Text } from 'react-native'
 import React from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
