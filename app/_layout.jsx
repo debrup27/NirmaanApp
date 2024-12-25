@@ -7,9 +7,7 @@ const _layout = () => {
 
   useEffect(() => {
     if (true) {
-      router.replace('/home')
-    } else {
-      router.replace("/welcome")
+      router.replace('/welcome')
     }
   })
   return (

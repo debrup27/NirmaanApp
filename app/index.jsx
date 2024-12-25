@@ -10,8 +10,8 @@ const index = () => {
     const router = useRouter();
   return (
     <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-      <Button title='Welcome' onPress={() => router.replace("welcome")}/>
-      {/* <Loading /> */}
+      {/* <Button title='Welcome' onPress={() => router.replace("welcome")}/> */}
+      <Loading />
     </View> 
   )
 }

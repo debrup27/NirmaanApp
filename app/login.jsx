@@ -37,9 +37,7 @@ const Login = () => {
         setLoading(false);
 
         if (true) { // if login is successful
-            router.replace("/home");
-        } else { // if login is unsuccessful
-            router.replace("/welcome")
+            router.push("/home");
         }
     }
 
