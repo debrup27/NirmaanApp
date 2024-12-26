@@ -67,13 +67,8 @@ const NewPost = () => {
     let data = {
       title: titleRef.current,
       body: bodyRef.current, 
-      file: file ? {
-        uri: getFileUri(file),  // The URI of the file selected (image/video)
-        type: getFileType(file), // The type of the file (image/video)
-        name: file.uri.split('/').pop() // The name of the file (optional)
-      } : null,   // The body text content from the editor
-      userId: "user123",        // Replace with actual user ID (can be fetched from the auth context)
-      timestamp: new Date().toISOString(),  // Optional timestamp
+      file: file ? getFileUri(file) : null,   // The body text content from the editor
+      username: "user123",        // Replace with actual user ID (can be fetched from the auth context)
     };
 
     setLoading(true);
